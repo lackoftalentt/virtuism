@@ -12,7 +12,10 @@ import { persistor, store } from './store/store.ts';
 
 createRoot(document.getElementById('root')!).render(
 	<StrictMode>
-		<BrowserRouter future={{ v7_relativeSplatPath: true }}>
+		<BrowserRouter
+			future={{ v7_relativeSplatPath: true }}
+			basename='/virtuism/'
+		>
 			<Provider store={store}>
 				<PersistGate loading={null} persistor={persistor}>
 					<App />
