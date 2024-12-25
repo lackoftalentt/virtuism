@@ -7,6 +7,8 @@ import {
 } from 'lucide-react';
 import * as React from 'react';
 import { useNavigate } from 'react-router';
+import logo from '../assets/images/logo.png'
+import profileImage from '../assets/images/isagi.jpg'
 
 import { NavMain } from '@/components/nav-main';
 import { NavUser } from '@/components/nav-user';
@@ -37,7 +39,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 		user: {
 			name: userName,
 			email: email,
-			avatar: '/src/assets/images/isagi.jpg',
+			avatar: profileImage,
 		},
 		navMain: [
 			{
@@ -75,9 +77,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 
 	return (
 		<Sidebar
-			className='h-[100vh] '
+			
 			variant='inset'
-			collapsible='icon'
+			collapsible='offcanvas'
 			{...props}
 		>
 			<SidebarHeader>
@@ -85,7 +87,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 					<img
 						onClick={() => onLogoHandler()}
 						className='w-[200px] cursor-pointer'
-						src='/src/assets/images/logo.png'
+						src={logo}
 						alt='Logo'
 					/>
 				</div>

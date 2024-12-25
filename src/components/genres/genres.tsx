@@ -29,7 +29,7 @@ export const Genres = ({ genres, category }: GenresProps) => {
 		<ul className='flex gap my-3 max-w-[1050px] justify-around items-center'>
 			{activeGenreId === null ? null : (
 				<span
-					className='mb-[22px] cursor-pointer '
+					className='mb-[22px] mr-3 cursor-pointer '
 					onClick={() => dispatch(clearActiveGenre({ category }))}
 				>
 					<BadgeX color='blue' />

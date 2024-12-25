@@ -1,4 +1,4 @@
-import { Pagination } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { Banner } from '@/components/banner';
@@ -10,7 +10,8 @@ export const BannerContainer = () => {
 	const { data, isLoading } = useGetMoviesQuery();
 	return (
 		<Swiper
-			modules={[Pagination]}
+			modules={[Pagination, Autoplay]}
+			autoplay={{ delay: 5000 }}
 			pagination={{ clickable: true }}
 			spaceBetween={1}
 			slidesPerView={1}

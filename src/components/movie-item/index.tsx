@@ -14,7 +14,7 @@ export const MovieCard = ({ movie, serial }: MovieCardProps) => {
 	return (
 		<div className='p-0 flex flex-col items-center justify-center rounded-xl group relative cursor-pointer mb-4'>
 			<img
-				className='w-[300px] h-[278px] rounded-xl object-cover transition-all duration-300 group-hover:blur-sm'
+				className='w-[200px] h-[278px] rounded-xl object-cover transition-all duration-300 group-hover:blur-sm'
 				src={
 					poster_path
 						? `https://image.tmdb.org/t/p/w500/${poster_path}`

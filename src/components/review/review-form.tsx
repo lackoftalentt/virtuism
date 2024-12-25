@@ -2,7 +2,9 @@ import { Button } from '@/components/ui/button';
 import { useAuth } from '@/hooks/use-auth';
 import { addReview } from '@/store/services/reviewsService';
 import { useState } from 'react';
+import { Bounce, toast } from 'react-toastify';
 import { ReviewFormBlur } from './review-form-blur';
+import profileImage from '/src/assets/images/isagi.jpg';
 
 interface ReviewsFormProps {
 	movieId: string;
@@ -11,12 +13,26 @@ interface ReviewsFormProps {
 export const ReviewsForm = ({ movieId }: ReviewsFormProps) => {
 	const { userName = 'Guest', userId, isAuth } = useAuth();
 	const [text, setText] = useState<string>('');
+	const notify = (message: string) =>
+		toast.info(message, {
+			position: 'top-right',
+			autoClose: 4000,
+			hideProgressBar: false,
+			closeOnClick: false,
+			pauseOnHover: true,
+			draggable: true,
+			theme: 'dark',
+			transition: Bounce,
+		});
 
 	const handleAddReview = async () => {
-		if (text.trim()) {
-			addReview(movieId, userId, userName, text);
-			setText('');
-		}
+		try {
+			if (text.trim()) {
+				addReview(movieId, userId, userName, text);
+				setText('');
+				notify('Message sended!')
+			}
+		} catch (error) {}
 	};
 
 	return (
@@ -30,7 +46,7 @@ export const ReviewsForm = ({ movieId }: ReviewsFormProps) => {
 					<div className='flex flex-col items-center justify-center'>
 						<img
 							className='w-[50px] rounded-full'
-							src='/src/assets/images/isagi.jpg'
+							src={profileImage}
 							alt='User profile'
 						/>
 						<p className='truncate font-semibold text-sm leading-tight opacity-80'>

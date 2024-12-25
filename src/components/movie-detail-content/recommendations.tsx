@@ -33,9 +33,9 @@ export const Recommendations = () => {
 		: 0;
 
 	return (
-		<section>
+		<section className='max-w-[1350px] grid justify-center'>
 			{recommendations?.results.length === 0 ? (
-				<h1 className='text-5xl font-bold mb-5 text-blue-900 block'>
+				<h1 className='text-5xl font-bold mb-5 text-blue-900 block  '>
 					We couldn't find recommended content &#129301;
 				</h1>
 			) : (

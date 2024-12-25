@@ -20,6 +20,7 @@ export const WatchButton = ({ movie, serial }: WatchButtonProps) => {
 
 		navigate(`/${type}/${id}`);
 		dispatch(setActiveUrl(`${type}`));
+		window.scrollTo(0, 0);
 	};
 
 	return (

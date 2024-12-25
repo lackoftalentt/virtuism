@@ -32,6 +32,7 @@ export const PaginationDemo = ({ total_page, category }: PaginationState) => {
 		if (page >= 1 && page <= maxPages) {
 			dispatch(setActivePage({ category, activePage: page }));
 		}
+		window.scrollTo(0, 0);
 	};
 
 	const getVisiblePages = (): number[] => {

@@ -1,3 +1,5 @@
+import profileImage from '/src/assets/images/isagi.jpg'
+
 type ReviewsItemProps = {
 	userName: string;
 	text: string;
@@ -9,7 +11,7 @@ export const ReviewsItem = ({ userName, text }: ReviewsItemProps) => {
 			<div className='space-y-1.5 p-3 flex flex-row items-center justify-between'>
 				<div className='flex items-center gap-2'>
 					<span className='relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full'>
-						<img src={'/src/assets/images/isagi.jpg'} alt='' />
+						<img src={profileImage} alt='Profile image' />
 					</span>
 					<h3 className='text-xl font-bold font-inter'>
 						{userName || 'Anonymous'}

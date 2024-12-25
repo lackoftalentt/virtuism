@@ -4,10 +4,12 @@ import { ReviewsBlock } from '@/components/review/reviews-block';
 
 export const MovieDetailPage = () => {
 	return (
-		<div>
-			<MovieDetailContent />
-			<ReviewsBlock />
-			<Recommendations />
-		</div>
+		<>
+			<div className='max-w-[1350px] grid items-center'>
+				<MovieDetailContent />
+				<ReviewsBlock />
+				<Recommendations />
+			</div>
+		</>
 	);
 };
