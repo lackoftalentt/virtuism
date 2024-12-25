@@ -10,7 +10,7 @@ export const Banner = (movie: Movie) => {
 					src={`https://image.tmdb.org/t/p/w1280/${movie.backdrop_path}`}
 					alt='Banner'
 				/>
-				<div className='group bg-black bg-opacity-50 inset-0 absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center '>
+				<div className='group bg-black bg-opacity-50 inset-0 absolute opacity-100 transition-opacity duration-300 flex items-center justify-center '>
 					<div className='flex items-center col'>
 						<div>
 							<h1 className=' text-white mb-3 font-bold flex gap-5 text-4xl w-[250px]'>
