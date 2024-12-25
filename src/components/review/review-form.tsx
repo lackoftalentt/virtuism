@@ -11,7 +11,7 @@ interface ReviewsFormProps {
 }
 
 export const ReviewsForm = ({ movieId }: ReviewsFormProps) => {
-	const { userName = 'Guest', userId, isAuth } = useAuth();
+	const { userName = 'Guest', userId, isAuth, email } = useAuth();
 	const [text, setText] = useState<string>('');
 	const notify = (message: string) =>
 		toast.info(message, {
@@ -28,7 +28,7 @@ export const ReviewsForm = ({ movieId }: ReviewsFormProps) => {
 	const handleAddReview = async () => {
 		try {
 			if (text.trim()) {
-				addReview(movieId, userId, userName, text);
+				addReview(movieId, userId, userName, text, email as string);
 				setText('');
 				notify('Message sended!')
 			}

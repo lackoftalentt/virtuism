@@ -13,7 +13,8 @@ export const addReview = async (
 	movieId: string,
 	userId: string | null,
 	userName: string | null,
-	text: string
+	text: string,
+	email: string
 ) => {
 
 	await addDoc(collection(db, 'reviews'), {
@@ -21,6 +22,7 @@ export const addReview = async (
 		userId,
 		userName,
 		text,
+		email
 	});
 };
 
@@ -36,6 +38,7 @@ export const getReviews = async (movieId: string): Promise<Review[]> => {
 			userId: data.userId,
 			userName: data.userName,
 			text: data.text,
+			email: data.email
 		} as Review;
 	});
 };
@@ -55,6 +58,7 @@ export const subscribeToReviews = (
 				userId: data.userId,
 				userName: data.userName,
 				text: data.text,
+				email: data.email
 			} as Review;
 		});
 

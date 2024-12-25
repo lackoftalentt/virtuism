@@ -130,4 +130,5 @@ export interface Review {
 	userId: string | null;
 	userName: string;
 	text: string;
+	email: string;
 }

@@ -73,6 +73,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 	const onLogoHandler = () => {
 		dispatch(setActiveUrl('/'));
 		navigate('/');
+		window.scrollTo(0,0)
 	};
 
 	return (

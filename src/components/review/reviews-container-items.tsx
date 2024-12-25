@@ -29,6 +29,7 @@ export const ReviewsItemsContainer = () => {
 					key={review.id}
 					userName={review.userName}
 					text={review.text}
+					email={review.email}
 				/>
 			))}
 		</>

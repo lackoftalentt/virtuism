@@ -43,6 +43,7 @@ export function NavMain({
 
 	const setUrl = (url: string) => {
 		dispatch(setActiveUrl(url));
+		window.scrollTo(0, 0);
 	};
 
 	return (
