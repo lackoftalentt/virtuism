@@ -1,12 +1,11 @@
 'use client';
 
-import { ChevronsUpDown, LogOut, Settings } from 'lucide-react';
+import { ChevronsUpDown, LogOut } from 'lucide-react';
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import {
 	DropdownMenu,
 	DropdownMenuContent,
-	DropdownMenuGroup,
 	DropdownMenuItem,
 	DropdownMenuLabel,
 	DropdownMenuSeparator,
@@ -16,11 +15,9 @@ import {
 	SidebarMenu,
 	SidebarMenuButton,
 	SidebarMenuItem,
-	useSidebar,
 } from '@/components/ui/sidebar';
 import { useAppDispatch } from '@/hooks/redux-hooks';
 import { removeUser } from '@/store/slices/userSlice';
-import { resetFavorites } from '@/store/slices/favoriteSlice';
 import { useNavigate } from 'react-router';
 
 export function NavUser({
@@ -32,14 +29,12 @@ export function NavUser({
 		avatar: string;
 	};
 }) {
-	const { isMobile } = useSidebar();
 	const dispatch = useAppDispatch();
-	const navigate = useNavigate()
+	const navigate = useNavigate();
 
 	const handleLogOut = () => {
 		dispatch(removeUser());
-		navigate('/login')
-		dispatch(resetFavorites())
+		navigate('/login');
 	};
 	return (
 		<SidebarMenu>
@@ -63,7 +58,7 @@ export function NavUser({
 					</DropdownMenuTrigger>
 					<DropdownMenuContent
 						className='w-[--radix-dropdown-menu-trigger-width] min-w-56 rounded-lg'
-						side={isMobile ? 'bottom' : 'right'}
+						side='top'
 						align='end'
 						sideOffset={4}
 					>
@@ -79,13 +74,6 @@ export function NavUser({
 								</div>
 							</div>
 						</DropdownMenuLabel>
-						<DropdownMenuSeparator />
-						<DropdownMenuGroup>
-							<DropdownMenuItem>
-							<Settings />
-								Profile
-							</DropdownMenuItem>
-						</DropdownMenuGroup>
 						<DropdownMenuSeparator />
 						<DropdownMenuItem onClick={() => handleLogOut()}>
 							<LogOut />
