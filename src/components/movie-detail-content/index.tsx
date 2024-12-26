@@ -63,7 +63,7 @@ export const MovieDetailContent = () => {
 								src={
 									content?.poster_path
 										? `https://media.themoviedb.org/t/p/w300_and_h450_bestv2/${content?.poster_path}`
-										: '/src/assets/images/logo.png'
+										: `${logo}`
 								}
 								alt='Poster'
 							/>
