@@ -7,7 +7,8 @@ Check it out here: [Virtuism Live](https://lackoftalentt.github.io/virtuism/)
 
 ## 🛠️ Technologies Used  
 - **React**: For building dynamic and reusable components.  
-- **Redux Toolkit**: To manage the application state efficiently, including pagination and active categories.  
+- **Redux Toolkit**: To manage the application state efficiently, including pagination and active categories.
+- **RTK Query**: For fetching and caching data from the TMDB API with minimal boilerplate code.    
 - **TypeScript**: For strong typing and ensuring code reliability.  
 - **React Router**: For implementing seamless navigation between pages.  
 - **Firebase**: Used to handle comments under movies.  
@@ -33,12 +34,7 @@ Check it out here: [Virtuism Live](https://lackoftalentt.github.io/virtuism/)
 
 5. **Comment Section**  
    - Users can leave comments on movie pages, powered by Firebase.  
-
-6. **Responsive UI**  
-   - Optimized for all screen sizes to ensure a smooth experience on both desktop and mobile devices.  
-
-7. **Error Handling**  
-   - Toast notifications display success or error messages for better feedback.  
+ 
 
 ---
 
