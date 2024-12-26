@@ -13,6 +13,8 @@ import { Dialog, DialogTrigger } from '@/components/ui/dialog';
 import { ContentTrailer } from '../content-trailer';
 import { FavoriteButton } from '../ui/favorite-button';
 
+import logo from '/src/assets/images/logo.png';
+
 function isMovie(content: Content): content is Movie {
 	return (content as Movie).title !== undefined;
 }
@@ -44,7 +46,7 @@ export const MovieDetailContent = () => {
 				src={
 					content.backdrop_path
 						? `https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/${content?.backdrop_path}`
-						: '/src/assets/images/logo.png'
+						: `${logo}`
 				}
 				alt={title || 'Backdrop'}
 				className='w-[1920px] h-[600px] object-cover rounded-2xl'
