@@ -8,7 +8,7 @@ export const Footer = () => {
 				<div className='sm:flex sm:items-center sm:justify-between'>
 					<a
 						target='_blank'
-						href='https://github.com/beybarysbb/virtuism'
+						href='https://github.com/lackoftalentt/virtuism'
 						className='flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse'
 					>
 						<img src={logo} className='h-8' alt='Virtuism Logo' />
@@ -24,7 +24,7 @@ export const Footer = () => {
 						<li>
 							<a
 								target='_blank'
-								href='https://github.com/beybarysbb'
+								href='https://github.com/lackoftalentt'
 								className='hover:underline'
 							>
 								GitHub
@@ -46,7 +46,7 @@ export const Footer = () => {
 					© 2025{' '}
 					<a
 						target='_blank'
-						href='https://github.com/beybarysbb/virtuism'
+						href='https://github.com/lackoftalentt/virtuism'
 						className='hover:underline'
 					>
 						Virtusm™
