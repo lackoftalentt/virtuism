@@ -23,8 +23,7 @@ export const Modal: React.FC<ModalProps> = ({
 	agreeMessage,
 }) => {
 	if (!isOpen) return null;
-
-	// Функция для предотвращения закрытия модального окна при клике внутри него
+	
 	const handleContentClick = (event: React.MouseEvent) => {
 		event.stopPropagation();
 	};
