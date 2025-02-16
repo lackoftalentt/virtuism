@@ -10,7 +10,6 @@ import { useParams } from 'react-router';
 export const ContentTrailer = () => {
 	const { id, type } = useParams<{ type: string; id: string }>();
 
-	// Получаем данные в зависимости от типа контента
 	const { data: videos } =
 		type === 'movie'
 			? useGetMovieVideosQuery(Number(id))
