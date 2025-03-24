@@ -12,8 +12,7 @@ Check it out here: [Virtuism Live](https://lackoftalentt.github.io/virtuism/)
 - **TypeScript**: For strong typing and ensuring code reliability.  
 - **React Router**: For implementing seamless navigation between pages.  
 - **Firebase**: Used to handle comments under movies.  
-- **TMDB API**: To fetch and display real-time data about movies and TV shows.  
-- **CSS Modules**: To create modular, maintainable, and scoped styles.  
+- **TMDB API**: To fetch and display real-time data about movies and TV shows.
 - **React Toastify**: For beautiful and responsive notifications.  
 
 ---
